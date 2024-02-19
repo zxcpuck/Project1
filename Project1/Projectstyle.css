@@ -15,13 +15,38 @@ body{
     justify-content: center;
 }
 
-.header>.header-a{
+/*.header>.header-a{*/
+/*    color: rgba(255, 255, 255, 0.70);*/
+/*    text-align: right;*/
+/*    font-family: "Lato", sans-serif;*/
+/*    font-weight: 300;*/
+/*    font-style: normal;*/
+/*    font-size: 18px;*/
+/*}*/
+
+.header-a {
     color: rgba(255, 255, 255, 0.70);
     text-align: right;
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
+    position: relative;
+}
+
+.header-a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
+
+.header-a:hover::after {
+    background-color: white;
 }
 
 .form1{
@@ -30,13 +55,24 @@ body{
     font-style: normal;
     width: 157px;
     height:44px;
-    backdrop-filter: blur(1px);background: #19191B;
+    backdrop-filter: blur(1px);
+    background: #19191B;
     color: white;
     border: 1px solid white;
     border-radius: 5px;
     position: absolute;
     top: 1.5%;
     right: 9%;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form1:hover {
+    background-color: #e8e8e8;
+    transform: scale(1.12);
+    color: black;
+    border: 2px solid #de8e13;
 }
 
 .form2{
@@ -52,6 +88,16 @@ body{
     top: 73%;
     left: 16.5%;
     background: #5454D4;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form2:hover {
+    background-color: #525AD9;
+    transform: scale(1.12);
+    color: white;
+    border: 2px solid #ffffff;
 }
 
 .header-logo{
@@ -530,6 +576,16 @@ body{
     height:61px;
     top: 418%;
     left: 78%;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form3:hover {
+    background-color: #525AD9;
+    transform: scale(1.12);
+    color: white;
+    border: 2px solid #ffffff;
 }
 
 
@@ -560,3 +616,5 @@ body{
     line-height: 38px; /* 237.5% */
     letter-spacing: -0.5px;
 }
+
+
